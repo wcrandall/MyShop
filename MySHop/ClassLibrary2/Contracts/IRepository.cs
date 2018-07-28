@@ -6,7 +6,7 @@ namespace MyShopCore.Contracts
     public interface IRepository<T> where T : BaseEntity
     {
         IQueryable<T> Collection();
-        void commit();
+        
         void Commit();
         void Delete(string Id);
         T Find(string Id);
