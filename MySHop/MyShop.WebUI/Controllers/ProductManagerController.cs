@@ -7,6 +7,7 @@ using MyShopCore.Models;
 using MyShop.DataAccess.InMemory;
 using MyShopCore.ViewModels;
 using MyShopCore.Contracts;
+using System.IO;
 
 namespace MyShop.WebUI.Controllers
 {
@@ -35,7 +36,7 @@ namespace MyShop.WebUI.Controllers
         }
         [HttpPost]
 
-        public ActionResult Create(Product product)
+        public ActionResult Create(Product product, HttpPostedFileBase file)
         {
             if(!ModelState.IsValid)
             {
@@ -43,6 +44,11 @@ namespace MyShop.WebUI.Controllers
             }
             else
             {
+                if (file != null)
+                {
+                    product.Image = product.id + Path.GetExtension(file.FileName);
+                    file.SaveAs(Server.MapPath("//Content//ProductImages//") + product.Image);
+                }
                 context.Insert(product);
                 context.Commit();
                 return RedirectToAction("Index");
@@ -57,6 +63,7 @@ namespace MyShop.WebUI.Controllers
             }
             else
             {
+
                 ProductManagerViewModel ViewModel = new ProductManagerViewModel();
                 ViewModel.Product = product;
                 ViewModel.ProductCategories = ProductCategories.Collection();
@@ -66,7 +73,7 @@ namespace MyShop.WebUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(Product product, string id)
+        public ActionResult Edit(Product product, string id, HttpPostedFileBase file)
         {
             Product ProductToEdit = context.Find(id);
 
@@ -82,9 +89,14 @@ namespace MyShop.WebUI.Controllers
                 }
                 else
                 {
+                    if (file != null)
+                    {
+                        ProductToEdit.Image = product.id + Path.GetExtension(file.FileName);
+                        file.SaveAs(Server.MapPath("//Content//ProductImages//") + ProductToEdit.Image);
+                    }
                     ProductToEdit.Category = product.Category;
                     ProductToEdit.Description = product.Description;
-                    ProductToEdit.Image = product.Image;
+                 
                     ProductToEdit.Name = product.Name;
                     ProductToEdit.Price = product.Price;
 
