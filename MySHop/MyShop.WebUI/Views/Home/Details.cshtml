@@ -34,7 +34,7 @@
 
         </dt>
        <dd>
-           <a href="#" class="btn btn-default">Add to Cart</a>
+           <a href="@Url.Action("AddToBasket", "Basket", new { id = Model.id })" class="btn btn-default">Add to Cart</a>
        </dd>
         <dt></dt>
        <dd>    @Html.ActionLink("Back to List", "Index")</dd>
