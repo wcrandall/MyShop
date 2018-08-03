@@ -1,0 +1,22 @@
+﻿#firstCard {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+#second {
+    position: relative;
+    margin-left: 125px;
+    margin-top: 10px;
+}
+
+#third {
+    position: relative;
+    margin-left: 125px;
+    margin-top: 10px;
+}
+
+.divCenter {
+    margin: auto;
+    max-Width: 1000px;
+}

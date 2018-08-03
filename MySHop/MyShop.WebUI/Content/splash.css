@@ -1,0 +1,50 @@
+﻿body {
+}
+.jumbotron {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.centerForm {
+    margin: 0 auto;
+}
+
+.why2 {
+    text-align: center;
+    font-family: Aladin;
+    font-weight: bold;
+    font-size: 300%;
+}
+
+.moveDown {
+    position: relative;
+    top: 50px;
+}
+
+#under {
+    text-decoration: underline;
+}
+
+#appStore {
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    width: 125px;
+}
+
+#footer {
+    background-color: black;
+    color: white;
+    top: 25px;
+    clear: both;
+    height: 400px;
+    position: relative;
+}
+
+#hold {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

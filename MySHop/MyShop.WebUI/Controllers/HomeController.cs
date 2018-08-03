@@ -48,6 +48,20 @@ namespace MyShop.WebUI.Controllers
                 return View(product);
             }
         }
+
+        
+
+
+        public ActionResult Splash()
+        {
+            return View();
+        }
+
+        public ActionResult Events()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
