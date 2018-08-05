@@ -35,7 +35,7 @@ namespace MyShopDataAcess.sql
             public void Delete(string Id)
             {
             var t = Find(Id); 
-            if (context.Entry(Id).State == EntityState.Detached)
+            if (context.Entry(t).State == EntityState.Detached)
             {
                 dbset.Attach(t);
             }
