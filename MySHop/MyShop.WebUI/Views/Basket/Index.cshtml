@@ -49,6 +49,7 @@
     <tr>
         <td colspan="4" style="text-align:right"><strong>Basket Total</strong></td>
         <td>@String.Format("{0:c}", (from p in Model select p.Price * p.Quantity).Sum())</td>
+        <td>@Html.ActionLink("Back to Products", "Index", "Home")</td>
     </tr>
 
 </table>
