@@ -227,6 +227,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Events.css" />
     <Content Include="Content\Images\37.png" />
+    <Content Include="Content\ProductImages\6bdba6a3350a3cfd72e2f4171b8d2966.jpg" />
+    <Content Include="Content\ProductImages\index.jfif" />
+    <Content Include="Content\ProductImages\indexdf.jfif" />
+    <Content Include="Content\ProductImages\kids shirt.jpg" />
+    <Content Include="Content\ProductImages\kids.jfif" />
+    <Content Include="Content\ProductImages\mens shirt.jfif" />
     <Content Include="Content\splash.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -331,7 +337,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\ProductImages\" />
     <Folder Include="Views\ProductCategory\" />
   </ItemGroup>
   <ItemGroup>
